@@ -11,7 +11,7 @@ body {
 
 .contenedor {
     width: 100%;
-    max-width: 2400px;
+    max-width: 1400px;
     /*ancho máximo de la página*/
     margin: 1px auto;
     /*auto permite centrar nuestra página en forma horizontal*/
@@ -19,12 +19,11 @@ body {
     gap: 20px;
     /*nos ahorramos tenes que poner márgenes entre los elementos*/
     grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(4, auto);
     grid-template-areas:
         "encabezado encabezado"
-        "logo logo"
+        "frase frase"
         "contact-form contact-info"
-        "map map"
         "pie pie";
 }
 
@@ -37,23 +36,23 @@ body {
     grid-area: encabezado;
     background-color: #59ABB3;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0.7em 9.5em;
 }
 
 /* Frase: mandanos un mensaje*/
 
-.contenedor .logo {
-    grid-area: logo;
+.contenedor .frase {
+    grid-area: frase;
     background: #fff;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.4em;
     padding-top: 2em;
 }
 
 /*Para cambiar el color de "mensaje"*/
 
-.contenedor .logo span {
+.contenedor .frase span {
     color: #b70e21
 }
 
@@ -62,7 +61,7 @@ body {
 .contenedor .contact-form {
     grid-area: contact-form;
     background-color: #fff;
-    font-size: 1.4em;
+    font-size: 1em;
     padding-right: 3em;
     padding-left: 12em;
     padding-top: 2em;
@@ -76,7 +75,7 @@ body {
 .contenedor .contact-form form input,
 .contenedor .contact-form form textarea {
     width: 100%;
-    padding: 0.8em 0 0.8em 0.6em;
+    padding: 0.6em 0 0.6em 0.5em;
     border: none;
     border: 1px solid rgb(199, 0, 57);
     border-radius: 10px;
@@ -112,7 +111,7 @@ body {
 .contenedor .contact-info {
     grid-area: contact-info;
     background-color: #fff;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 2em 6em;
 }
 
@@ -145,17 +144,17 @@ body {
         margin: 0;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        grid-template-areas: "encabezado encabezado"
-            "logo logo"
+        grid-template-areas: 
+            "encabezado encabezado"
+            "frase frase"
             "contact-form contact-form"
             "contact-info contact-info"
-            "map map"
             "pie pie";
     }
 
     .contenedor .contact-form {
         padding-right: 5em;
-        padding-left: 4em;
+        padding-left: 5em;
         padding-top: 2em;
     }
 
@@ -168,7 +167,7 @@ body {
         padding: 1.1em 2em;
     }
 
-    .contenedor .logo {
+    .contenedor .frase {
         font-size: 1.2em;
         padding-top: 2em;
     }
@@ -184,24 +183,24 @@ body {
 
 @media screen and (max-width: 450px) {
     .contenedor {
-        grid-template-areas: "encabezado encabezado"
-            "logo logo"
+        grid-template-areas: 
+            "encabezado encabezado"
+            "frase frase"
             "contact-form contact-form"
             "contact-info contact-info"
-            "map map"
             "pie pie";
     }
 
     .contenedor .contact-form {
-        font-size: 0.8em;
-        padding-right: 3em;
-        padding-left: 2em;
+        font-size: 0.7em;
+        padding-right: 4em;
+        padding-left: 4em;
         padding-top: 2em;
     }
 
     .contenedor .contact-info {
-        padding: 2em 5em;
-        font-size: 0.9em;
+        padding: 2em 4em;
+        font-size: 0.8em;
     }
 
     .contenedor .encabezado {
@@ -209,7 +208,7 @@ body {
         padding: 1.1em 3em;
     }
 
-    .contenedor .logo {
+    .contenedor .frase {
         font-size: 0.9em;
         padding-top: 2em;
     }
