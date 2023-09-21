@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: fff;
+    color: #2f2bbc;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 2400px;
+    /*ancho máximo de la página*/
+    margin: 1px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
+    display: grid;
+    gap: 20px;
+    /*nos ahorramos tenes que poner márgenes entre los elementos*/
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "encabezado encabezado"
+        "logo logo"
+        "contact-form contact-info"
+        "map map"
+        "pie pie";
+}
+
+/* Header*/
+
+
+/*Titulo:contacto*/
+
+.contenedor .encabezado {
+    grid-area: encabezado;
+    background-color: #59ABB3;
+    color: white;
+    font-size: 1.5em;
+    padding: 0.7em 9.5em;
+}
+
+/* Frase: mandanos un mensaje*/
+
+.contenedor .logo {
+    grid-area: logo;
+    background: #fff;
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 2em;
+}
+
+/*Para cambiar el color de "mensaje"*/
+
+.contenedor .logo span {
+    color: #b70e21
+}
+
+/* Formulario de contacto*/
+
+.contenedor .contact-form {
+    grid-area: contact-form;
+    background-color: #fff;
+    font-size: 1.4em;
+    padding-right: 3em;
+    padding-left: 12em;
+    padding-top: 2em;
+}
+
+.contenedor .contact-form form p {
+    margin: 0;
+    padding-top: 1em;
+}
+
+.contenedor .contact-form form input,
+.contenedor .contact-form form textarea {
+    width: 100%;
+    padding: 0.8em 0 0.8em 0.6em;
+    border: none;
+    border: 1px solid rgb(199, 0, 57);
+    border-radius: 10px;
+}
+
+/* Botón del formulario de contacto*/
+
+.contenedor .contact-form form button {
+    background: #0f54b3;
+    color: white;
+    font-size: 0.8em;
+    border: 0;
+    text-transform: uppercase;
+    padding: 0.8em 2em;
+    border-radius: 10px;
+
+}
+
+.contenedor .contact-form p.boton {
+    text-align: right
+}
+
+.contenedor .contact-form form button:hover,
+.contenedor .contact-form form button:focus {
+    background: #59ABB3;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* Información de contacto */
+
+.contenedor .contact-info {
+    grid-area: contact-info;
+    background-color: #fff;
+    font-size: 1.5em;
+    padding: 2em 6em;
+}
+
+.contenedor .contact-info h3,
+.contenedor .contact-info ul,
+.contenedor .contact-info p {
+    text-align: left;
+}
+
+.contenedor .contact-info h3 {
+    padding-bottom: 2em;
+}
+
+.contenedor .contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contenedor .contact-info ul li {
+    padding: .4em;
+}
+
+/*Footer*/
+
+
+/* Medias queries - Pantalla para tablet*/
+
+@media screen and (max-width: 960px) {
+    .contenedor {
+        margin: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "encabezado encabezado"
+            "logo logo"
+            "contact-form contact-form"
+            "contact-info contact-info"
+            "map map"
+            "pie pie";
+    }
+
+    .contenedor .contact-form {
+        padding-right: 5em;
+        padding-left: 4em;
+        padding-top: 2em;
+    }
+
+    .contenedor .contact-info {
+        padding: 2em 12em;
+    }
+
+    .contenedor .encabezado {
+        font-size: 1.2em;
+        padding: 1.1em 2em;
+    }
+
+    .contenedor .logo {
+        font-size: 1.2em;
+        padding-top: 2em;
+    }
+
+    .contenedor .contact-form form button {
+        padding: 0.4em 1em;
+        border-radius: 10px;
+    }
+}
+
+
+/*Pantalla para celular*/
+
+@media screen and (max-width: 450px) {
+    .contenedor {
+        grid-template-areas: "encabezado encabezado"
+            "logo logo"
+            "contact-form contact-form"
+            "contact-info contact-info"
+            "map map"
+            "pie pie";
+    }
+
+    .contenedor .contact-form {
+        font-size: 0.8em;
+        padding-right: 3em;
+        padding-left: 2em;
+        padding-top: 2em;
+    }
+
+    .contenedor .contact-info {
+        padding: 2em 5em;
+        font-size: 0.9em;
+    }
+
+    .contenedor .encabezado {
+        font-size: 0.8em;
+        padding: 1.1em 3em;
+    }
+
+    .contenedor .logo {
+        font-size: 0.9em;
+        padding-top: 2em;
+    }
+}
