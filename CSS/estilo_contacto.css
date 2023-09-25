@@ -34,9 +34,13 @@ body {
 
 .contenedor .encabezado {
     grid-area: encabezado;
-    background-color: #59ABB3;
+    background: linear-gradient(to right,rgb(0,66,88)45%,rgb(37,44,44));
     color: white;
     font-size: 1.2em;
+    padding: 0.7em 2em;
+}
+
+.contenedor .encabezado img {
     padding: 0.7em 9.5em;
 }
 

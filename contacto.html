@@ -22,6 +22,9 @@
 
     <link rel="stylesheet" href="CSS/estilo_contacto.css">
 
+    <!-- Javascript -->
+    <script src="./JS/script.js"></script>
+
 </head>
 
 <body>
@@ -34,24 +37,24 @@
         </div>
         <div class="contact-form">
             <h3>Mensaje</h3>
-            <form action="">
+            <form action="" onsubmit='return validar()'>
                 <p>
                     <label>Nombre</label>
-                    <input type="text" name="Nombre">
+                    <input type="text" name="Nombre" id="nombre" onblur='validarNombre()'>
                 </p>
 
                 <p>
                     <label>Apellido</label>
-                    <input type="text" name="Nombre">
+                    <input type="text" name="Apellido" id="apellido" onblur='validarApellido()'>
                 </p>
 
                 <p>
                     <label>E-mail</label>
-                    <input type="email" name="e-mail">
+                    <input type="email" name="e-mail" id="email" onblur='validarEmail()'>
                 </p>
                 <p class>
                     <label>Consulta</label>
-                    <textarea name="Consulta" cols="50" rows="10"></textarea>
+                    <textarea name="Consulta" cols="50" rows="10" id="consulta" onblur='validarConsulta()'></textarea>
                 </p>
                 <p class="boton">
                     <button type="submit">
@@ -69,7 +72,7 @@
                 <li><i class="fa-brands fa-whatsapp"></i> 1162375444</li>
             </ul>
         </div>
-    
+
         <footer class="pie">
         </footer>
     </div>
