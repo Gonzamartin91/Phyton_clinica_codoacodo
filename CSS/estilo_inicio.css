@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: fff;
+    color: #2f2bbc;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1400px;
+    /*ancho máximo de la página*/
+    margin: 1px auto;
+    /*auto permite centrar nuestra página en forma horizontal*/
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    /*Cant y % de columnas en la que divido la pagina*/
+    /*justify-content: space-evenly;*/
+    /*Justificación del contenido de columnas*/
+    grid-template-rows: 15% 5% 23% 50% 5%;
+    align-content: center;
+    /*ALineación de contenido de filas*/
+    column-gap: 5px;
+    /*Separación entre columnas*/
+    row-gap: 5px;
+    /*Separación entre filas*/
+    grid-template-areas: 'encabezado encabezado encabezado'
+        'frase frase frase'
+        '. . .'
+        '. . .'
+        'pie pie pie';
+}
+
+/* Header*/
+/*Titulo: Clinica Codo a Codo*/
+.contenedor .encabezado {
+    grid-area: encabezado;
+    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    color: white;
+    font-size: 1.2em;
+    padding: 0.7em 2em;
+}
+
+/*Navegador*/
+.contenedor .navegador {
+    font-size: 0.8em;
+}
+
+/* Frase: Clinica codo a codos*/
+.contenedor .frase {
+    grid-area: frase;
+    background: #fff;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+/*Para cambiar el color de "Codo a codo"*/
+.contenedor .frase span {
+    color: #b70e21
+}
+
+
+/*Footer*/
+.contenedor .pie {
+    grid-area: pie;
+    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+
+/* Medias queries - Pantalla para tablet*/
+@media screen and (max-width: 960px) {
+    .contenedor {
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            'encabezado encabezado encabezado'
+            'frase frase frase'
+            '. . .'
+            '. . .'
+            'pie pie pie';
+    }
+}
+
+/*Pantalla para celular*/
+@media screen and (max-width: 450px) {
+    .contenedor {      
+        grid-template-areas:
+            'encabezado encabezado encabezado'
+            'frase frase frase'
+            '. . .'
+            '. . .'
+            'pie pie pie';
+    }
+}

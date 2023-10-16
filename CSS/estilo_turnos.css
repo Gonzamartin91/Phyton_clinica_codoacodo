@@ -95,18 +95,6 @@ body {
     margin: 0 auto;
 }
 
-/*Footer*/
-.contenedor .pie {
-    grid-area: pie;
-    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
-    color: white;
-    text-align: center;
-    font-size: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-}
-
-
 .contenedor .agenda{    
     grid-area: agenda; 
     display: grid;
@@ -137,6 +125,16 @@ body {
     font-weight: bold;  
 }
 
+/*Footer*/
+.contenedor .pie {
+    grid-area: pie;
+    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
 
 
 /* Medias queries - Pantalla para tablet*/

@@ -45,7 +45,6 @@ body {
 }
 
 /* Frase: mandanos un mensaje*/
-
 .contenedor .frase {
     grid-area: frase;
     background: #fff;
