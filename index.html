@@ -1,45 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/05298bda59.js" crossorigin="anonymous"></script>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/05298bda59.js" crossorigin="anonymous"></script>
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="CSS/estilo_inicio.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="CSS/estilo_inicio.css">
 
-    <!-- Javascript -->
-    <script src="JS/script.js"></script>
+<!-- Javascript -->
+<script src="JS/script.js"></script>
 </head>
 
 <body>
     <div class="contenedor">
         <header class="encabezado">
-            <h1>Clinica CODO a CODO</h1>
-            <nav>
+            <div>
+                <img src="Imagenes/clin_codo_a_codo.png" alt="" class="logo">
+                <h1 class="cartel">CLINICA CODO a CODO</h1>
+            </div>
+            <nav class="navegador">
                 <a href="serv_medicos.html" style="color: white;">Servicios Médicos |</a>
                 <a href="la_clinica.html" style="color: white;">La Clínica |</a>
                 <a href="turnos.html" style="color: white;">Turnos |</a>
                 <a href="contacto.html" style="color: white;">Contacto</a>
             </nav>
-        </header>
 
+        </header>
 
         <div class="frase">
             <h2>Clínica <span>Codo a Codo</span></h2>
         </div>
 
-        
+        <!-- efecto cambiante de imagenes -->
+        <div class="carousel-container">
+            <img class="carousel-image" src="Imagenes/index01.jpg">
+            <img class="carousel-image" src="Imagenes/index02.jpg">
+            <img class="carousel-image" src="imagenes/index03.jpg">
+            <img class="carousel-image" src="imagenes/index04.jpg">
+            <img class="carousel-image" src="imagenes/index05.jpg">
+
+        </div>
+        <script>
+            // EFECTO CARROUSEL DE PAGINA DE INICIO
+            // Arreglo de URLs de imágenes
+            const images = ["imagenes/index01.jpg", "imagenes/index02.jpg", "imagenes/index03.jpg", "imagenes/index04.jpeg", "imagenes/index05.jpg"];
+
+            const carouselImages = document.querySelectorAll(".carousel-image");
+            let currentIndex = 0;
+
+            function changeImage() {
+                carouselImages[currentIndex].style.opacity = 0;
+                currentIndex = (currentIndex + 1) % images.length;
+                carouselImages[currentIndex].style.opacity = 1;
+            }
+
+            // Cambiar de imagen cada 3 segundos (3000 milisegundos)
+            setInterval(changeImage, 3000);
+
+            // Inicializar la primera imagen
+            carouselImages[currentIndex].style.opacity = 1;
+
+            //FIN DEL EFECTO
+        </script>
+        <!-- efecto cambiante de imagenes -->
 
 
         <footer class="pie">

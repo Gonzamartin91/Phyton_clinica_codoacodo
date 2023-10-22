@@ -21,15 +21,18 @@
     <link rel="stylesheet" href="CSS/estilo_turnos.css">
 
     <!-- Javascript -->
-    <script src="JS/script.js"></script>
+    <script src="JS/script_turnos.js"></script>
 
 </head>
 
 <body>
     <div class="contenedor">
         <header class="encabezado">
-            <h1>RESERVA DE TURNOS</h1>
-            <nav>
+            <div>
+                <img src="Imagenes/clin_codo_a_codo.png" alt="" class="logo">
+                <h1 class="cartel">SISTEMA de RESERVA DE TURNOS</h1>
+            </div>
+                <nav class="navegador">
                 <a href="index.html" style="color: white;">Inicio |</a>
                 <a href="la_clinica.html" style="color: white;">La Clínica |</a>
                 <a href="serv_medicos.html" style="color: white;">Servicios Médicos |</a>
@@ -44,11 +47,11 @@
         <div class="frameselector">
             <b><u>Seleccione los datos para mostrar turnos disponibles</u></b>
             <br>
-            <form action="#">
+            <form action="">
                 <fieldset>
                     <br>
                     <label for="esp" class="label"><b>Especialidad:</b></label>
-                    <select name="Especialidad" id="esp" class="select">
+                    <select name="Especialidad" id="esp" class="select" onblur="verificar_esp()">
                         <option value="vacio">Seleccione una especialidad</option>
                         <option value="1">Traumatología</option>
                         <option value="2">Oftalmología</option>
@@ -58,10 +61,21 @@
 
                     <br><br>
                     <label for="fecha" class="label"><b>Fecha para el turno:</b></label>
-                    <input type="date" class="select" min="2023-01-01" max="2023-12-31">
+                    <input type="date" class="select" min="2023-01-01" max="2023-12-31" id="fecha">
 
                     <br><br>
-                    <input type="submit" value="Verificar" / class="input">
+                    <div class="boton">
+                        <button type="button" class="input" onclick="verificar()">
+                            <h3>Enviar</h3>
+                        </button>
+
+                        <button type="button" class="input" onclick="borrar()">
+                            <h3>Borrar</h3>
+                        </button>
+
+                        
+                    </div>
+
                 </fieldset>
             </form>
         </div>
@@ -73,25 +87,25 @@
             <div class="especialidad">GINECOLOGIA</div>
             <div class="especialidad">ODONTOLOGIA</div>
             <div class="especialidad">de 8:00hs a 8:45hs</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
+            <div class="turno_ocupado" id="prueba1"></div>
+            <div class="turno_libre" id="prueba7"></div>
+            <div class="turno_libre" id="prueba8"></div>
+            <div class="turno_libre" id="prueba9"></div>
             <div class="especialidad">de 9:00hs a 9:45hs</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
+            <div class="turno_libre" id="prueba10"></div>
+            <div class="turno_libre" id="prueba11"></div>
+            <div class="turno_ocupado" id="prueba2"></div>
+            <div class="turno_ocupado" id="prueba3"></div>
             <div class="especialidad">de 10:00hs a 10:45hs</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
+            <div class="turno_libre" id="prueba12"></div>
+            <div class="turno_libre" id="prueba13"></div>
+            <div class="turno_ocupado" id="prueba4"></div>
+            <div class="turno_ocupado" id="prueba5"></div>
             <div class="especialidad">de 11:00hs a 11:45hs</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
-            <div class="turno">+</div>
+            <div class="turno_libre" id="prueba14"></div>
+            <div class="turno_ocupado" id="prueba6"></div>
+            <div class="turno_libre" id="prueba15"></div>
+            <div class="turno_libre" id="prueba16"></div>
         </div>
 
         <footer class="pie">
