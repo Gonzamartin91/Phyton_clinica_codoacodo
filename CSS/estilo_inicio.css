@@ -21,7 +21,7 @@ body {
     /*Cant y % de columnas en la que divido la pagina*/
     /*justify-content: space-evenly;*/
     /*Justificación del contenido de columnas*/
-    grid-template-rows: 15% 5% 23% 50% 5%;
+    grid-template-rows: 15% 5% 75% 5%;
     align-content: center;
     /*ALineación de contenido de filas*/
     column-gap: 5px;
@@ -30,7 +30,6 @@ body {
     /*Separación entre filas*/
     grid-template-areas: 'encabezado encabezado encabezado'
         'frase frase frase'
-        '. . .'
         '. . .'
         'pie pie pie';
 }
@@ -42,12 +41,21 @@ body {
     background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
     color: white;
     font-size: 1.2em;
-    padding: 0.7em 2em;
 }
 
-/*Navegador*/
+.contenedor .logo {
+    padding-top: 0.55%;
+    padding-left: 0.5%;
+    float: left;
+}
+
+.contenedor .cartel {
+    padding-top: 1%;
+    padding-left: 69%;
+}
+
 .contenedor .navegador {
-    font-size: 0.8em;
+    padding-left: 68%;
 }
 
 /* Frase: Clinica codo a codos*/
@@ -63,6 +71,23 @@ body {
     color: #b70e21
 }
 
+/*cambiar imagenes de presentacion*/
+.carousel-container {
+    width: 550px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 89%;
+    margin-top: 8%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s;
+}
+
 
 /*Footer*/
 .contenedor .pie {
@@ -71,34 +96,53 @@ body {
     color: white;
     text-align: center;
     font-size: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.5%;
 }
 
 
 /* Medias queries - Pantalla para tablet*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     .contenedor {
-        margin: 0;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 75% 25%;
         grid-template-rows: auto;
-        grid-template-areas:
-            'encabezado encabezado encabezado'
-            'frase frase frase'
-            '. . .'
-            '. . .'
-            'pie pie pie';
+        grid-template-areas: 'encabezado encabezado'
+            'frase frase'
+            '. .'
+            'pie pie';
     }
+
+    .contenedor .logo {
+        padding-top: 0.55%;
+        padding-left: 0.5%;
+        float: left;
+    }
+
+    .contenedor .cartel {
+        padding-top: 2%;
+        padding-left: 55%;
+    }
+
+    .contenedor .navegador {
+        padding-left: 54%;
+    }
+
+    /*cambiar imagenes de presentacion*/
+.carousel-container {
+    width: 550px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 28%;
+    margin-top: 1%;
 }
 
-/*Pantalla para celular*/
-@media screen and (max-width: 450px) {
-    .contenedor {      
-        grid-template-areas:
-            'encabezado encabezado encabezado'
-            'frase frase frase'
-            '. . .'
-            '. . .'
-            'pie pie pie';
-    }
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s;
+}
+
+
 }

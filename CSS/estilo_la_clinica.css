@@ -21,7 +21,7 @@ body {
     /*Cant y % de columnas en la que divido la pagina*/
     /*justify-content: space-evenly;*/
     /*Justificación del contenido de columnas*/
-    grid-template-rows: 15% 5% 23% 50% 5%;
+    grid-template-rows: 15% 5% 23% 52% 5%;
     align-content: center;
     /*ALineación de contenido de filas*/
     column-gap: 5px;
@@ -42,12 +42,21 @@ body {
     background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
     color: white;
     font-size: 1.2em;
-    padding: 0.7em 2em;
 }
 
-/*Navegador*/
+.contenedor .logo {
+    padding-top: 0.55%;
+    padding-left: 0.5%;
+    float: left;
+}
+
+.contenedor .cartel {
+    padding-top: 1%;
+    padding-left: 85%;
+}
+
 .contenedor .navegador {
-    font-size: 0.8em;
+    padding-left: 71%;
 }
 
 /* Frase: La Clíninca*/
@@ -69,13 +78,19 @@ body {
     color: gray;
 }
 
-.contenedor .lat_clinica {
-    grid-area: lat_clinica;
+.contenedor .lista {
+    padding-bottom: 10px;
 }
 
-.imggrande {
-    width: 100%;
-    height: 290%;
+.contenedor .lat_clinica {
+    grid-area: lat_clinica;
+
+}
+
+.contenedor .img_lat {
+    padding-top: 10%;
+    max-width: 100%;
+    height: 250%;
 }
 
 
@@ -86,34 +101,65 @@ body {
     color: white;
     text-align: center;
     font-size: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.5%;
 }
 
 
 /* Medias queries - Pantalla para tablet*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     .contenedor {
-        margin: 0;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 75% 25%;
         grid-template-rows: auto;
-        grid-template-areas:
-            'encabezado encabezado encabezado'
-            'frase frase frase'
-            'descripcion descripcion lat_clinica'
-            'descripcion descripcion lat_clinica'
-            'pie pie pie';
+        grid-template-areas: 'encabezado encabezado'
+            'frase frase'
+            'descripcion lat_clinica'
+            'pie pie';
+    }
+
+    .contenedor .logo {
+        padding-top: 0.55%;
+        padding-left: 0.5%;
+        float: left;
+    }
+
+    .contenedor .cartel {
+        padding-top: 2%;
+        padding-left: 78%;        
+    }
+
+    .contenedor .navegador {
+        padding-left: 58%;
+    }
+
+    .contenedor .descripcion {
+        grid-area: descripcion;
+        padding-left: 3%;
+        color: gray;
+    }
+
+    .contenedor .img_lat {
+        padding-top: 10%;
+        max-width: 100%;
+        height: auto;
     }
 }
 
 /*Pantalla para celular*/
 @media screen and (max-width: 450px) {
-    .contenedor {      
+    .contenedor {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
         grid-template-areas:
-            'encabezado encabezado encabezado'
-            'frase frase frase'
-            'descripcion descripcion descripcion'
-            'descripcion descripcion descripcion'
-            'pie pie pie';
+            'encabezado'
+            'frase'
+            'descripcion'
+            'pie pie';
     }
+
+    .contenedor .img_lat {
+        display: none;
+    }
+
 }

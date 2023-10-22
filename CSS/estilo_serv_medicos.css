@@ -30,8 +30,8 @@ body {
     /*Separación entre filas*/
     grid-template-areas: 'encabezado encabezado encabezado'
         'frase frase frase'
-        '. . .'
-        '. . .'
+        '. especialidades .'
+        '. especialidades .'
         'pie pie pie';
 }
 
@@ -42,12 +42,21 @@ body {
     background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
     color: white;
     font-size: 1.2em;
-    padding: 0.7em 2em;
 }
 
-/*Navegador*/
+.contenedor .logo {
+    padding-top: 0.55%;
+    padding-left: 0.5%;
+    float: left;
+}
+
+.contenedor .cartel {
+    padding-top: 1%;
+    padding-left: 73%;
+}
+
 .contenedor .navegador {
-    font-size: 0.8em;
+    padding-left: 76%;
 }
 
 /* Frase: Servicios Medicos*/
@@ -63,6 +72,35 @@ body {
     color: #b70e21
 }
 
+.contenedor .especialidades {
+    grid-area: especialidades;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*Cant y % de columnas en la que divido la pagina*/
+    grid-template-rows: repeat(2, 1fr);
+    align-content: center;
+    /*ALineación de contenido de filas*/
+    column-gap: 5px;
+    /*Separación entre columnas*/
+    row-gap: 5px;
+    /*Separación entre filas*/
+    background-color: black;
+}
+
+.contenedor .especialidades .detalle {
+    background-color: white;
+    padding-top: 50%;
+    color: black;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.contenedor .especialidades .tipo_esp{
+margin-top: 40%;
+}
+
+
 
 /*Footer*/
 .contenedor .pie {
@@ -71,34 +109,59 @@ body {
     color: white;
     text-align: center;
     font-size: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.5%;
 }
 
 
 /* Medias queries - Pantalla para tablet*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     .contenedor {
-        margin: 0;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
         grid-template-rows: auto;
         grid-template-areas:
             'encabezado encabezado encabezado'
             'frase frase frase'
-            '. . .'
-            '. . .'
+            'especialidades especialidades especialidades'
             'pie pie pie';
     }
+
+    .contenedor .logo {
+        padding-top: 0.1%;
+        padding-left: 0.5%;
+        float: left;
+    }
+
+    .contenedor .cartel {
+        padding-top: 2%;
+        padding-left: 60%;
+    }
+
+    .contenedor .navegador {
+        padding-left: 65%;
+    }   
+
+    .contenedor .especialidades .detalle {
+        background-color:white;
+        padding-top: 50%;
+        color: black;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+
+    .contenedor .especialidades .tipo_esp{
+        margin-top: 10%;
+        }
 }
 
 /*Pantalla para celular*/
 @media screen and (max-width: 450px) {
-    .contenedor {      
+    .contenedor {
         grid-template-areas:
-            'encabezado encabezado encabezado'
-            'frase frase frase'
-            '. . .'
-            '. . .'
-            'pie pie pie';
+            'encabezado encabezado'
+            'frase frase'
+            '. .'
+            'pie pie';
     }
 }

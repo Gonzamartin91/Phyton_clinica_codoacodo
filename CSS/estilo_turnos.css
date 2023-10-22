@@ -21,18 +21,18 @@ body {
     /*Cant y % de columnas en la que divido la pagina*/
     /*justify-content: space-evenly;*/
     /*Justificación del contenido de columnas*/
-    grid-template-rows: 15% 5% 23% 50% 5%;
+    grid-template-rows: 15% 5% 23% 52% 5%;
     align-content: center;
     /*ALineación de contenido de filas*/
     column-gap: 5px;
     /*Separación entre columnas*/
     row-gap: 5px;
     /*Separación entre filas*/
-    grid-template-areas:    'encabezado encabezado encabezado'
-                            'frase frase frase'
-                            'frame frame frame'
-                            'agenda agenda agenda'
-                            'pie pie pie';
+    grid-template-areas: 'encabezado encabezado encabezado'
+        'frase frase frase'
+        'frame frame frame'
+        'agenda agenda agenda'
+        'pie pie pie';
 }
 
 /* Header*/
@@ -42,12 +42,21 @@ body {
     background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
     color: white;
     font-size: 1.2em;
-    padding: 0.7em 2em;
 }
 
-/*Navegador*/
+.contenedor .logo {
+    padding-top: 0.55%;
+    padding-left: 0.5%;
+    float: left;
+}
+
+.contenedor .cartel {
+    padding-top: 1%;
+    padding-left: 55%;
+}
+
 .contenedor .navegador {
-    font-size: 0.8em;
+    padding-left: 69%;
 }
 
 /* Frase: Sistema de reserva de turnos*/
@@ -88,15 +97,18 @@ body {
 }
 
 /*Estilo para el boton de enviar*/
-.contenedor .input {
+.contenedor .boton {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
 }
 
-.contenedor .agenda{    
-    grid-area: agenda; 
+.contenedor .input {
+    margin-right: 20px;
+}
+
+.contenedor .agenda {
+    grid-area: agenda;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     /*Cant y % de columnas en la que divido la pagina*/
@@ -110,19 +122,27 @@ body {
     background-color: black;
 }
 
-.contenedor .agenda .turno{    
+.contenedor .agenda .turno_ocupado {
     background: linear-gradient(to right, rgb(20, 109, 139)45%, rgb(13, 52, 77));
-    padding: 10px;
-    color: white;    
-    text-align: center;     
+    padding: 9%;
+    color: red;
+    text-align: center;
 }
 
-.contenedor .agenda .especialidad{    
+.contenedor .agenda .turno_libre {
+    background: linear-gradient(to right, rgb(20, 109, 139)45%, rgb(13, 52, 77));
+    padding: 9%;
+    color: greenyellow;
+    text-align: center;
+}
+
+
+.contenedor .agenda .especialidad {
     background-color: white;
-    padding: 10px;
+    padding: 9%;
     color: black;
-    text-align: center;    
-    font-weight: bold;  
+    text-align: center;
+    font-weight: bold;
 }
 
 /*Footer*/
@@ -132,23 +152,37 @@ body {
     color: white;
     text-align: center;
     font-size: 0.8em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding: 0.5%;
 }
 
 
 /* Medias queries - Pantalla para tablet*/
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     .contenedor {
-        margin: 0;
-        grid-template-columns: 1fr 1fr 1fr;
+        display: grid;
+        grid-template-columns: 75% 25%;
         grid-template-rows: auto;
         grid-template-areas:
-        'encabezado encabezado encabezado'
-        'frase frase frase'
-        'frame frame frame'
-        'agenda agenda agenda'
-        'pie pie pie';
+            'encabezado encabezado'
+            'frase frase'
+            'frame frame'
+            'agenda agenda'
+            'pie pie';
+    }
+
+    .contenedor .logo {
+        padding-top: 0.1%;
+        padding-left: 0.5%;
+        float: left;
+    }
+
+    .contenedor .cartel {
+        padding-top: 2%;
+        padding-left: 35%;        
+    }
+
+    .contenedor .navegador {
+        padding-left: 55%;
     }
 }
 
@@ -156,10 +190,10 @@ body {
 @media screen and (max-width: 450px) {
     .contenedor {
         grid-template-areas:
-        'encabezado encabezado encabezado'
-        'frase frase frase'
-        'frame frame frame'
-        'agenda agenda agenda'
-        'pie pie pie';
+            'encabezado encabezado encabezado'
+            'frase frase frase'
+            'frame frame frame'
+            'agenda agenda agenda'
+            'pie pie pie';
     }
 }
