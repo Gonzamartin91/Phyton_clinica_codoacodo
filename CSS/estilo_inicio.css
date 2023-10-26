@@ -30,7 +30,7 @@ body {
     /*Separación entre filas*/
     grid-template-areas: 'encabezado encabezado encabezado'
         'frase frase frase'
-        '. . .'
+        'izquierda centro centro'
         'pie pie pie';
 }
 
@@ -71,14 +71,29 @@ body {
     color: #b70e21
 }
 
+.contenedor .centro {    
+    grid-area: centro;   
+}
+
+.contenedor .izquierda {
+    grid-area: izquierda;       
+}
+
+.contenedor .izquierda .api{
+    color: black;
+    position: relative;
+    text-align:left;
+    margin-top: 40%;
+}
+
 /*cambiar imagenes de presentacion*/
-.carousel-container {
-    width: 550px;
-    height: 450px;
+.contenedor .centro .carousel-container {    
+    width: 400px;
+    height: 300px;
     overflow: hidden;
     position: relative;
-    margin-left: 89%;
-    margin-top: 8%;
+    margin-left: 3.5%;
+    margin-top: 13%;
 }
 
 .carousel-image {
@@ -104,11 +119,11 @@ body {
 @media screen and (max-width: 1000px) {
     .contenedor {
         display: grid;
-        grid-template-columns: 75% 25%;
+        grid-template-columns: 50% 50%;
         grid-template-rows: auto;
         grid-template-areas: 'encabezado encabezado'
             'frase frase'
-            '. .'
+            'izquierda centro'
             'pie pie';
     }
 
@@ -127,22 +142,29 @@ body {
         padding-left: 54%;
     }
 
+    .contenedor .izquierda .api{
+        color: black;
+        position: relative;
+        text-align:left;
+        margin-top: 12%;
+        margin-bottom: 20%;
+    }
+
     /*cambiar imagenes de presentacion*/
-.carousel-container {
-    width: 550px;
-    height: 450px;
-    overflow: hidden;
-    position: relative;
-    margin-left: 28%;
-    margin-top: 1%;
-}
+    .contenedor .centro .carousel-container {
+        width: 300px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        margin-left: 40%;
+        margin-top: 10%;
+    }
 
-.carousel-image {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: opacity 1s;
-}
-
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: opacity 1s;
+    }
 
 }
