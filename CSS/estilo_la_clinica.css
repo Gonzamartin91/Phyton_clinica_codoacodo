@@ -21,7 +21,7 @@ body {
     /*Cant y % de columnas en la que divido la pagina*/
     /*justify-content: space-evenly;*/
     /*Justificación del contenido de columnas*/
-    grid-template-rows: 15% 5% 23% 52% 5%;
+    grid-template-rows: 15% 5% 65% 5%;
     align-content: center;
     /*ALineación de contenido de filas*/
     column-gap: 5px;
@@ -44,19 +44,23 @@ body {
     font-size: 1.2em;
 }
 
-.contenedor .logo {
-    padding-top: 0.55%;
-    padding-left: 0.5%;
+.contenedor .encabezado .logo {
+    position: relative;
     float: left;
+    margin-top: 0.6%;
+    margin-left: 0.6%;
 }
 
-.contenedor .cartel {
-    padding-top: 1%;
-    padding-left: 85%;
+.contenedor .encabezado .cartel {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 85%;
 }
 
-.contenedor .navegador {
-    padding-left: 71%;
+.contenedor .encabezado .navegador {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 71%;
 }
 
 /* Frase: La Clíninca*/
@@ -76,6 +80,7 @@ body {
 .contenedor .descripcion {
     grid-area: descripcion;
     color: gray;
+    margin-top: 1%;
 }
 
 .contenedor .lista {
@@ -88,9 +93,9 @@ body {
 }
 
 .contenedor .img_lat {
-    padding-top: 10%;
+    margin-top: 20%;
     max-width: 100%;
-    height: 250%;
+    height: 75%;
 }
 
 
@@ -109,27 +114,31 @@ body {
 @media screen and (max-width: 1000px) {
     .contenedor {
         display: grid;
-        grid-template-columns: 75% 25%;
+        grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-template-areas: 'encabezado encabezado'
-            'frase frase'
+        grid-template-areas: 'encabezado'
+            'frase'
             'descripcion lat_clinica'
-            'pie pie';
+            'pie';
     }
 
-    .contenedor .logo {
-        padding-top: 0.55%;
-        padding-left: 0.5%;
+    .contenedor .encabezado .logo {
+        position: relative;
         float: left;
+        margin-top: 0.6%;
+        margin-left: 0.6%;
     }
 
-    .contenedor .cartel {
-        padding-top: 2%;
-        padding-left: 78%;        
+    .contenedor .encabezado .cartel {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 61%;
     }
 
-    .contenedor .navegador {
-        padding-left: 58%;
+    .contenedor .encabezado .navegador {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 59%;
     }
 
     .contenedor .descripcion {

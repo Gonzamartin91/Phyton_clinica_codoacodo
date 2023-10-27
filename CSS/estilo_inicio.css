@@ -34,8 +34,7 @@ body {
         'pie pie pie';
 }
 
-/* Header*/
-/*Titulo: Clinica Codo a Codo*/
+/*Para el background y generales del HEADER*/
 .contenedor .encabezado {
     grid-area: encabezado;
     background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
@@ -43,19 +42,23 @@ body {
     font-size: 1.2em;
 }
 
-.contenedor .logo {
-    padding-top: 0.55%;
-    padding-left: 0.5%;
+.contenedor .encabezado .logo {
+    position: relative;
     float: left;
+    margin-top: 0.6%;
+    margin-left: 0.6%;
 }
 
-.contenedor .cartel {
-    padding-top: 1%;
-    padding-left: 69%;
+.contenedor .encabezado .cartel {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 69%;
 }
 
-.contenedor .navegador {
-    padding-left: 68%;
+.contenedor .encabezado .navegador {
+    position: relative;
+    margin-top: 1%;
+    margin-left: 68%;
 }
 
 /* Frase: Clinica codo a codos*/
@@ -71,23 +74,24 @@ body {
     color: #b70e21
 }
 
-.contenedor .centro {    
-    grid-area: centro;   
+.contenedor .centro {
+    grid-area: centro;
 }
 
 .contenedor .izquierda {
-    grid-area: izquierda;       
+    grid-area: izquierda;
 }
 
-.contenedor .izquierda .api{
+/* Para la API*/
+.contenedor .izquierda .api {
     color: black;
     position: relative;
-    text-align:left;
+    margin-left: 1%;
     margin-top: 40%;
 }
 
 /*cambiar imagenes de presentacion*/
-.contenedor .centro .carousel-container {    
+.contenedor .centro .carousel-container {
     width: 400px;
     height: 300px;
     overflow: hidden;
@@ -119,33 +123,37 @@ body {
 @media screen and (max-width: 1000px) {
     .contenedor {
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: auto;
         grid-template-rows: auto;
-        grid-template-areas: 'encabezado encabezado'
-            'frase frase'
+        grid-template-areas: 'encabezado'
+            'frase'
             'izquierda centro'
-            'pie pie';
+            'pie';
     }
 
-    .contenedor .logo {
-        padding-top: 0.55%;
-        padding-left: 0.5%;
+    .contenedor .encabezado .logo {
+        position: relative;
         float: left;
+        margin-top: 0.6%;
+        margin-left: 0.6%;
+    }
+    
+    .contenedor .encabezado .cartel {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 56%;
+    }
+    
+    .contenedor .encabezado .navegador {
+        position: relative;
+        margin-top: 1%;
+        margin-left: 55%;
     }
 
-    .contenedor .cartel {
-        padding-top: 2%;
-        padding-left: 55%;
-    }
-
-    .contenedor .navegador {
-        padding-left: 54%;
-    }
-
-    .contenedor .izquierda .api{
+    .contenedor .izquierda .api {
         color: black;
         position: relative;
-        text-align:left;
+        margin-left: 1%;
         margin-top: 12%;
         margin-bottom: 20%;
     }
