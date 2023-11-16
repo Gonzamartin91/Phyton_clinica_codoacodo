@@ -15,7 +15,7 @@ body {
     /*ancho máximo de la página*/
     margin: 1px auto;
     /*auto permite centrar nuestra página en forma horizontal*/
-    height: 100vh;
+    /*height: 100vh;*/
     display: grid;
     grid-template-columns: 33% 33% 33%;
     /*Cant y % de columnas en la que divido la pagina*/
@@ -39,28 +39,28 @@ body {
 /*Titulo: La Clinica*/
 .contenedor .encabezado {
     grid-area: encabezado;
-    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    background: linear-gradient(to right,rgb(0,66,88)45%,rgb(37,44,44));
     color: white;
-    font-size: 1.2em;
+    font-size: 1.2em;    
 }
 
 .contenedor .encabezado .logo {
     position: relative;
     float: left;
-    margin-top: 0.6%;
-    margin-left: 0.6%;
-}
+    margin-top: 0.3%;
+    margin-left: 3%;
 
+}
 .contenedor .encabezado .cartel {
     position: relative;
     margin-top: 1%;
-    margin-left: 73%;
+    margin-left: 69%;
 }
 
 .contenedor .encabezado .navegador {
     position: relative;
-    margin-top: 1%;
-    margin-left: 76%;
+    margin-top: 0%;
+    margin-left: 73.5%;
 }
 
 /* Frase: Servicios Medicos*/
@@ -104,8 +104,6 @@ body {
     margin-top: 40%;
 }
 
-
-
 /*Footer*/
 .contenedor .pie {
     grid-area: pie;
@@ -114,6 +112,7 @@ body {
     text-align: center;
     font-size: 0.8em;
     padding: 0.5%;
+    margin-top:5%;
 }
 
 

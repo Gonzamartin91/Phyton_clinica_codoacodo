@@ -39,30 +39,30 @@ body {
 /*Titulo: Reserva de turnos*/
 .contenedor .encabezado {
     grid-area: encabezado;
-    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    background: linear-gradient(to right,rgb(0,66,88)45%,rgb(37,44,44));
     color: white;
-    font-size: 1.2em;
+    font-size: 1.2em;    
 }
 
 .contenedor .encabezado .logo {
     position: relative;
     float: left;
     margin-top: 0.6%;
-    margin-left: 0.6%;
+    margin-left: 3%;
+
 }
 
 .contenedor .encabezado .cartel {
     position: relative;
     margin-top: 1%;
-    margin-left: 71%;
+    margin-left: 67%;
 }
 
 .contenedor .encabezado .navegador {
     position: relative;
-    margin-top: 1%;
-    margin-left: 69%;
+    margin-top: 0%;
+    margin-left: 66%;
 }
-
 /* Frase: Sistema de reserva de turnos*/
 .contenedor .frase {
     grid-area: frase;

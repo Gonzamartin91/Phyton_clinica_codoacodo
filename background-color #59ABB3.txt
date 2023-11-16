@@ -1,0 +1,2 @@
+background-color: #59ABB3;
+linear-gradient(to right,rgb(0,66,88)45%,rgb(37,44,44));

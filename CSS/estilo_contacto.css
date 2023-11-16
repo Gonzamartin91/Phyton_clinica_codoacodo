@@ -43,19 +43,20 @@ body {
     position: relative;
     float: left;
     margin-top: 0.6%;
-    margin-left: 0.6%;
+    margin-left: 3%;
+
 }
 
 .contenedor .encabezado .cartel {
     position: relative;
     margin-top: 1%;
-    margin-left: 84%;
+    margin-left: 81%;
 }
 
 .contenedor .encabezado .navegador {
     position: relative;
     margin-top: 1%;
-    margin-left: 71%;
+    margin-left: 67%;
 }
 
 /* Frase: mandanos un mensaje*/
@@ -63,7 +64,7 @@ body {
     grid-area: frase;
     background: #fff;
     text-align: center;
-    font-size: 1.4em;    
+    font-size: 1.6em;    
 }
 
 /*Para cambiar el color de "mensaje"*/
@@ -151,6 +152,15 @@ body {
 }
 
 /*Footer*/
+.contenedor .pie {
+    grid-area: pie;
+    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 0.5%;
+    margin-top:5%;
+}
 
 
 /* Medias queries - Pantalla para tablet*/
@@ -191,20 +201,20 @@ body {
     .contenedor .encabezado .logo {
         position: relative;
         float: left;
-        margin-top: 0.6%;
-        margin-left: 0.6%;
+        margin-top: 1%;
+        margin-left: 3%;
     }
     
     .contenedor .encabezado .cartel {
         position: relative;
-        margin-top: 1%;
-        margin-left: 77%;
+        margin-top: 2%;
+        margin-left: 69%;
     }
     
     .contenedor .encabezado .navegador {
         position: relative;
-        margin-top: 1%;
-        margin-left: 57%;
+        margin-top: 2%;
+        margin-left: 46%;
     }
 
 }
@@ -235,12 +245,25 @@ body {
     }
 
     .contenedor .encabezado {
-        font-size: 0.8em;
-        padding: 1.1em 3em;
+        font-size: 0.6em;
+        padding: 0em 0em;
+    }
+
+    .contenedor .encabezado .cartel {
+        position: relative;
+        margin-top: 7%;
+        margin-left: 69%;
+    }
+    
+    .contenedor .encabezado .navegador {
+        position: relative;
+        margin-top: 5%;
+        margin-left: 46%;
     }
 
     .contenedor .frase {
         font-size: 0.9em;
         padding-top: 2em;
     }
-}
+}    
+    

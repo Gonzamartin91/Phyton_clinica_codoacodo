@@ -37,36 +37,38 @@ body {
 /*Para el background y generales del HEADER*/
 .contenedor .encabezado {
     grid-area: encabezado;
-    background: linear-gradient(to right, rgb(0, 66, 88)45%, rgb(37, 44, 44));
+    background: linear-gradient(to right,rgb(0,66,88)45%,rgb(37,44,44));
     color: white;
-    font-size: 1.2em;
+    font-size: 1.2em;    
 }
 
 .contenedor .encabezado .logo {
     position: relative;
     float: left;
     margin-top: 0.6%;
-    margin-left: 0.6%;
+    margin-left: 3%;
+
 }
 
 .contenedor .encabezado .cartel {
     position: relative;
     margin-top: 1%;
-    margin-left: 69%;
+    margin-left: 65%;
 }
 
 .contenedor .encabezado .navegador {
     position: relative;
-    margin-top: 1%;
-    margin-left: 68%;
+    margin-top: 0%;
+    margin-left: 65%;
 }
 
-/* Frase: Clinica codo a codos*/
+/* Frase: Clinica codo a codo*/
 .contenedor .frase {
     grid-area: frase;
     background: #fff;
     text-align: center;
     font-size: 1.4em;
+    padding-top: 2em;
 }
 
 /*Para cambiar el color de "Codo a codo"*/
@@ -80,6 +82,7 @@ body {
 
 .contenedor .izquierda {
     grid-area: izquierda;
+    margin-left:6%;
 }
 
 /* Para la API*/
@@ -120,7 +123,7 @@ body {
 
 
 /* Medias queries - Pantalla para tablet*/
-@media screen and (max-width: 1000px) {
+/*@media screen and (max-width: 1000px) {
     .contenedor {
         display: grid;
         grid-template-columns: auto;
@@ -129,34 +132,47 @@ body {
             'frase'
             'izquierda centro'
             'pie';
-    }
+    }*/
+
+@media screen and (max-width: 1000px) {
+    .contenedor {
+        margin: 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "encabezado encabezado"
+            "frase frase"
+            "izquierda centro"
+            "pie pie";
+        }
 
     .contenedor .encabezado .logo {
         position: relative;
         float: left;
-        margin-top: 0.6%;
-        margin-left: 0.6%;
-    }
+        margin-top: 1%;
+        margin-left: 3%;
+        }
     
     .contenedor .encabezado .cartel {
         position: relative;
-        margin-top: 1%;
-        margin-left: 56%;
-    }
-    
+        margin-top: 2%;
+        margin-left: 69%;
+        }
+
     .contenedor .encabezado .navegador {
         position: relative;
-        margin-top: 1%;
-        margin-left: 55%;
-    }
-
+        margin-top: 2%;
+        margin-left: 46%;
+        }
+    
     .contenedor .izquierda .api {
         color: black;
         position: relative;
         margin-left: 1%;
         margin-top: 12%;
         margin-bottom: 20%;
-    }
+        }
+    
 
     /*cambiar imagenes de presentacion*/
     .contenedor .centro .carousel-container {
