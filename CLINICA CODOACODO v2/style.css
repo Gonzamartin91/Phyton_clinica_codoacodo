@@ -117,11 +117,23 @@ body {
         background-repeat: no-repeat;
         padding: 0 auto;
     }
-.banner{
-    
-}
-
-
+    .content-turnos{
+        grid-column: span 5;
+        grid-row: span 1;
+        color: #fff;
+        background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 auto;
+        
+    }
+    .banner-turno{
+        padding: 60px;
+   
+    }
+    .calendario{
+        margin: 60px;
+    }
 
 
 

@@ -9,6 +9,12 @@
     <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
+<!-- para calendario de turnos-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
 </head>
 
 <body>
@@ -29,10 +35,13 @@
             </nav>
         </header>
 
-        <main class="content">
-            <div class="banner">
+        <main class="content-turnos">
+            <div class="banner-turnos">
                 <h1>Turnos</h1>
-                <p>Nuestro objetivo es su Bienestar.</span></p>
+
+                <div id="datepicker" class="calendario"></div>
+
+               
             </div>
         </main>
 
@@ -43,6 +52,9 @@
         </footer>
 
     </div>
+
+    <script src="script.js"></script>
 </body>
+
 
 </html>
