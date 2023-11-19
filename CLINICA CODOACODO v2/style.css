@@ -117,7 +117,8 @@ body {
         background-repeat: no-repeat;
         padding: 0 auto;
     }
-    .content-turnos{
+    .content-turnos,
+    .content-laclinica{
         grid-column: span 5;
         grid-row: span 1;
         color: #fff;
@@ -127,7 +128,8 @@ body {
         padding: 0 auto;
         
     }
-    .banner-turno{
+    .banner-turno,
+    .banner-laclinica{
         padding: 60px;
    
     }
