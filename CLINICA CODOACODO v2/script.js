@@ -1,7 +1,7 @@
 
 //Disponibilidad de turnos definido en el array dates
 $(function() {
-    var dates = ["2021-05-15", "2021-05-16", "2021-05-17", "2021-05-18", "2021-05-19"]; // Días de los turnos disponibles
+    var dates = ["2023-11-20", "2023-11-21", "2023-11-22"]; // Días de los turnos disponibles
    
     $("#datepicker").datepicker({
        dateFormat: 'yy-mm-dd',
