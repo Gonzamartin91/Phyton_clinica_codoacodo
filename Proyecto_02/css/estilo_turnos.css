@@ -8,15 +8,10 @@ body {
     /* background: #eee; */
     /* background-color: #ecf0f1; */
     /* Para el fondo de la pantalla se usó un patron obtenido en: https://freefrontend.com/css-background-patterns/ */
-    background: radial-gradient(black 3px, transparent 4px),
-        radial-gradient(black 3px, transparent 4px),
-        linear-gradient(#fff 4px, transparent 0),
-        linear-gradient(45deg, transparent 74px,
-            transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
-        #fff;
-    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    background-image: url("../img/fondo03.jpg");
+    background-repeat: no-repeat;
+    background-size: 125% 100%;
+    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
     color: #000000;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* font-family: 'Manjari', sans-serif; */
@@ -42,10 +37,10 @@ body {
 .container>div {
     background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
     padding: 20px;
-    border: 1px solid #000000;    
+    border: 1px solid #000000;
 }
 
-.container>.footer{
+.container>.footer {
     display: flex;
     justify-content: space-between;
     background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
@@ -170,7 +165,7 @@ body {
     background: #ffffff;
 }
 
-.container .related-post .img{
+.container .related-post .img {
     width: 100%;
 }
 
@@ -223,7 +218,7 @@ body {
 }
 
 .content .frameselector .boton .input {
-    margin-left: 2%;
+    margin-left: 2%;    
 }
 
 /*Estilo de la agenda*/
@@ -286,12 +281,17 @@ body {
         font-size: 75%;
     }
 
-    .related-post {
+    .container>.related-post {
         grid-column: 1/-1;
     }
 
+    .container .related-post .post {
+        align-items: center;
+    }
+
     .container .related-post .img{
-        width: 80%;
+        width: 45%;
+        margin-left: 27%;
     }
 
     /* HEADER */
