@@ -8,9 +8,10 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="./css/estilo_index.css">
+  <link rel="stylesheet" href="css/style.css">
   <!-- Javascript -->
-  <script src="./JS/script_form.js"></script>
+  <script src="JS/script_form.js"></script>
+  <script src="JS/api.js"></script>
 
 </head>
 
@@ -23,6 +24,7 @@
       <nav class="menu">
         <a href="la_clinica.html">La Clinica</a>
         <a href="servicios.html">Servicios Médicos</a>
+
         <a href="turnos.html">Turnos</a>
 
         <label for="check" class="esconder-menu">
@@ -32,8 +34,27 @@
     </header>
 
     <main class="content">
-    
-    </main>
+      <div class="embed-container">
+            <iframe src="https://www.youtube.com/embed/WheDj5cIakE" frameborder="0" allowfullscreen></iframe> 
+       </div>
+
+      <div class="izquierda"> 
+       <!--  Etiquetas y muestra datos de la API -->
+        <div class="api">
+            <h1><u>CLIMA EN LA CIUDAD</u></h1>
+            <i class="fa-solid fa-earth-americas"></i> <span id="timezone"></span> <br>
+           <strong> <i style="color:black; text-decoration: underline; font-size:20px;"class="fa-solid fa-calendar-days"> FECHA:</i></strong> <span id="current.time"></span> <br>
+           <strong> <i style="color:black; text-decoration: underline; font-size:20px;"class="fa-solid fa-temperature-three-quarters">TEMP ACTUAL:</i> </strong> <span id="current.temperature_2m"></span>
+            <span id="current_units.temperature_2m"></span> <br>
+            <strong> <i style="color:black; text-decoration: underline; font-size:20px;" class="fa-solid fa-wind">VEL DEL VIENTO:</i></strong>  <span id="current.windspeed_10m"></span>
+            <span id="current_units.windspeed_10m"></span> <br>
+            <strong> <i style="color:black; text-decoration: underline; font-size:20px;"class="fa-solid fa-compass">DIRECCION DEL VIENTO:</i></strong> <span id="current.winddirection_10m"></span>
+            <span id="current_units.winddirection_10m"></span> <br>
+            <strong> <i style="color:black; text-decoration: underline; font-size:20px;"   class="fa-solid fa-water">HUMEDAD:</i></strong>  <span id="current.relativehumidity_2m"></span>
+            <span id="current_units.relativehumidity_2m"></span> <br>
+        </div>
+    </div>
+      </main>
 
     <aside class="sidebar">
       <div>
