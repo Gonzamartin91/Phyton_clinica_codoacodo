@@ -219,6 +219,8 @@ body {
 
 /* MEDIA QUERIES */
 
+/* Pantalla para table*/
+
 @media screen and (max-width: 1000px){
 .header {
     text-align: center;
