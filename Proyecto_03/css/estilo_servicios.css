@@ -103,31 +103,28 @@ body {
 /* fin menu */
 
 
-
 /* _______________________________________________________________________ */
 
 /* Main */
 
 .content {
-    /* Se establece que el main va a ocupar 3 columnas y 4 filas de la grilla */
-    grid-column: span 3;
-    grid-row: span 4;
+    /* Se establece que el main va a ocupar 2 columnas y 6 filas de la grilla */
+    grid-column: span 2;
+    grid-row: span 5;
     color: #fff;
     /* background: linear-gradient(to right,rgb(0, 66, 88) 45%,  rgb(37, 44, 44)); */
     background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 auto;
+    padding: 40px;
+
 }
 
+.content>img{
+    width: 100%;
+    max-width: 350px;
 
-
-
-
-
-
-
-
+}
 
 
 
@@ -137,163 +134,23 @@ body {
 
 /* Aside */
 .sidebar {
-    grid-column: span 2;
-    grid-row: span 4;
+    grid-column: span 3;
+    grid-row: span 5;
     display: flex;
     flex-direction: column;
     background: rgb(20, 44, 44);
-    padding: 3px;
     color: #ffffff;
-
     align-items: center;
-    justify-content: center;
-}
-
-.sidebar img {
-    display: block;
-    width: 100%;
-    margin: 5px auto;
 }
 
 .sidebar p {
-    text-align: center;
+    text-align: justify;
+    padding: 100px 40px 80px 40px;
 }
 
 /* Fin aside */
 
-/* _______________________________________________________________________ */
 
-/* post */
-
-.container>.related-post {
-    background: rgb(0, 66, 88) 30%;
-    border-radius: 10px;
-    border: 2px solid #000;
-    color: #ffffff;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-}
-
-
-.related-post:hover {
-    cursor: pointer;
-    color: #000000;
-    background: #ffffff;
-}
-
-/* Fin Post */
-
-/* galeria de servicios */
-.servicios {
-    grid-column: span 5;
-    grid-row: span 4;
-}
-
-.servicios>.related-post {
-    margin-top: 1vh;
-    background: rgb(0, 66, 88) 30%;
-    border-radius: 10px;
-    border: 2px solid #000;
-    color: #ffffff;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-
-}
-
-
-
-/* fin galeria de servicios */
-
-/* _______________________________________________________________________ */
-
-/* Formulario de Contacto */
-#contacto {
-    grid-column: span 5;
-    grid-row: span 4;
-    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
-    padding: 50px 0px;
-    color: #fff;
-}
-
-#contacto h4 {
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-
-#contacto form {
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-.datos-form {
-    display: flex;
-}
-
-.datos-form div {
-    padding: 10px;
-    flex: 1;
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-form input,
-form textarea {
-    background: rgb(0, 66, 88) 30%;
-    border-radius: 10px;
-    border: 2px solid #fff;
-    padding: 10px 5px;
-    outline: 0;
-    color: #fff;
-    width: 100%;
-}
-
-form input:focus,
-form textarea:focus {
-
-    box-shadow: 0 0 0 2.5px #4bae77;
-}
-
-form input::placeholder,
-form textarea::placeholder {
-    color: #fff;
-}
-
-.mensaje {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.boton-saber-mas {
-    background: rgb(0, 66, 88) 30%;
-    display: block;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-
-    padding: 5px 5px;
-
-    text-align: center;
-    transition: 0.4s;
-}
-
-.boton-saber-mas:hover {
-    background: #4fa776ad;
-
-}
-
-/* Fin Formulario */
 /* Footer */
 .footer {
     display: flex;
