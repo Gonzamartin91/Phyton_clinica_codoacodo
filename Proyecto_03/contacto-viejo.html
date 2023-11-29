@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/05298bda59.js" crossorigin="anonymous"></script>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="CSS/estilo_contacto.css">
+
+    <!-- Javascript -->
+    <script src="JS/script.js"></script>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="encabezado">
+            
+            <div class="logo">
+                <img src="/Imagenes/logo_clin_cac.png">
+            </div>
+
+            <div class="cartel">
+                <h1>CONTACTO</h1>
+            </div>
+
+            <div class="navegador">
+                <nav>
+                    <a href="index.html" style="color:white;">Inicio |</a>
+                    <a href="serv_medicos.html" style="color: white;">Servicios Médicos |</a>
+                    <a href="la_clinica.html" style="color: white;">La Clínica |</a>
+                    <a href="turnos.html" style="color: white;">Turnos</a>
+                </nav>
+            </div>
+        
+    </header>
+
+        <div class="frase">
+            <h2>Mandanos un <span>mensaje</span></h2>            
+        </div>
+
+
+        <div class="contact-form">
+            <h3>Mensaje</h3>
+            <form action="" onsubmit='return validar()'>
+                <p>
+                    <label>Nombre</label>
+                    <input type="text" name="Nombre" id="nombre" onblur='validarNombre()'>
+                </p>
+
+                <p>
+                    <label>Apellido</label>
+                    <input type="text" name="Apellido" id="apellido" onblur='validarApellido()'>
+                </p>
+
+                <p>
+                    <label>E-mail</label>
+                    <input type="email" name="e-mail" id="email" onblur='validarEmail()'>
+                </p>
+                <p class>
+                    <label>Consulta</label>
+                    <textarea name="Consulta" cols="50" rows="10" id="consulta" onblur='validarConsulta()'></textarea>
+                </p>
+                <p class="boton">
+                    <button type="submit">
+                        <h3><i class="fa-solid fa-paper-plane"></i> Enviar</h3>
+                    </button>
+                </p>
+            </form>
+        </div>
+
+        
+        <div class="contact-info">
+            <h3>Contacto</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i> Esperanza 114, Buenos Aires</li>
+                <li><i class="fa-solid fa-envelope"></i> E-mail: clinica_cac@clinica.com.ar</li>
+                <li><i class="fa-solid fa-phone"></i> 1154228123</li>
+                <li><i class="fa-brands fa-whatsapp"></i> 1162375444</li>
+            </ul>
+        </div>
+
+        <footer class="pie">
+            <h3>
+                <i class="fa-solid fa-location-dot"></i> Esperanza 114, Buenos Aires --
+                <i class="fa-solid fa-envelope"></i> E-mail: clinica_cac@clinica.com.ar --
+                <i class="fa-solid fa-phone"></i> 1154228123 --
+                <i class="fa-brands fa-whatsapp"></i> 1162375444
+            </h3>
+        </footer>
+    </div>
+</body>
+
+</html>

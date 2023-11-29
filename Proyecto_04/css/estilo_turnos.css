@@ -23,7 +23,6 @@ body {
 
 }
 
-
 /* CONTAINER */
 
 .container {
@@ -38,7 +37,6 @@ body {
 
 }
 
-.container>.footer,
 .container>.header,
 .container>div {
     background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
@@ -46,6 +44,52 @@ body {
     border: 1px solid #000000;
 }
 
+.container>.footer {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    padding: 20px;
+    border: 1px solid #000000;
+    font-size: small;
+}
+
+.footer>a {
+    background: rgb(0, 66, 88) 30%;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 5px 5px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: lowercase;
+    transition: 0.4s;
+
+}
+
+.footer>a:hover {
+    background: #4fa776ad;
+
+}
+
+.flasher_car {
+    background-color: red;
+}
+
+.flasher_od {
+    background-color: blue;
+}
+
+.flasher_of {
+    background-color: green;
+}
+
+.flasher_tr {
+    background-color: yellow;
+}
+
+.flasher_rd {
+    background-color: gray;
+}
 
 .header,
 .footer {
@@ -102,141 +146,126 @@ body {
 
 /* fin menu */
 
+/* _______________________________________________________________________ */
+
+/* post */
+
+.container>.related-post {
+    background: rgb(0, 66, 88) 30%;
+    border-radius: 10px;
+    border: 2px solid #000;
+    color: #ffffff;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+
+.related-post:hover {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+}
+
+.container .related-post .img {
+    width: 100%;
+}
+
+/* Fin Post */
+
 
 /* _______________________________________________________________________ */
 
 /* Main */
 
-
-/* .content {
-    /* Se establece que el main va a ocupar 5 columnas y 6 filas de la grilla */
-    /*display: grid;
-    /*grid-column: span 5;
-    color: #fff;
-    background: linear-gradient(to right,rgb(0, 66, 88) 45%,  rgb(37, 44, 44)); 
-    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 40px;
-}   */
-
-/* .content {
+.content {
+    /* Se establece que el main va a ocupar 5 columnas y 4 filas de la grilla */
     grid-column: span 5;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    /*Se establece una grilla de 5 columnas de 1 fraccion*/
-    /* gap: 1.2em;
-}
-
-.side-nav {
-    grid-column: span 2;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-.informacion {
-    /* Se establece que el main va a ocupar 3 columnas y 4 filas de la grilla */
-    /*grid-column: span 3;
     grid-row: span 4;
     color: #fff;
     /* background: linear-gradient(to right,rgb(0, 66, 88) 45%,  rgb(37, 44, 44)); */
-    /*background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 2em
-} */
+    padding: 0 auto;
+}
 
-/*
-.image {
-    grid-column: span 3;
-    grid-row: span 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*Estilo del título */
+.content .titulo {
+    text-align: center;
+}
 
+/*Estilo del frame de los selectores*/
+.content .frameselector {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    text-align: center;
+}
 
-} */
-/* .informacion {
-    grid-column: span 3;
-    grid-row: span 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}  */
+/*Estilo de las labels de los selectores*/
+.content .frameselector .label {
+    margin-top: 0.5%;
+}
+
+.content .frameselector .label .label1 {
+    margin-left: 2%;
+}
+
+/*Estilo de los selectores*/
+.content .frameselector .boton {
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.content .frameselector .boton .input {
+    margin-left: 2%;    
+}
+
+/*Estilo de la agenda*/
+.content .agenda {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    /* Esto es para el tamaño de las COLLUMNAS */
+    grid-template-rows: 3fr 3fr 3fr 3fr 3fr;
+    /* Esto es para el tamaño de las FILAS */
+    column-gap: 0.5%;
+    /* Esto es para esl espacio ENTRE COLUMNAS */
+    row-gap: 1.5%;
+    /* Esto es para el espacio ENTRE FILAS */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.content .agenda .especialidad {
+    background-color: white;
+    padding: 9%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content .agenda .turno_ocupado {
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    padding: 9%;
+    color: red;
+    text-align: center;
+}
+
+.content .agenda .turno_libre {
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    padding: 9%;
+    color: greenyellow;
+    text-align: center;
+}
 
 /* Fin Main */
-
-/* _______________________________________________________________________ */
-
-/* Aside */
-/* .side {
-    grid-column: span 3;
-    grid-row: span 5;
-    display: flex;
-    flex-direction: column;
-    background: rgb(20, 44, 44);
-    color: #ffffff;
-    align-items: center;
-}
-
-.sidebar p {
-    text-align: justify;
-    padding: 100px 40px 80px 40px;
-} */
-
-/* Fin aside */
-
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer h4 {
-    font-size: small;
-}
-
-.footer>a {
-    background: rgb(0, 66, 88) 30%;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    padding: 5px 5px;
-    margin-right: 20px;
-    text-decoration: none;
-    color: #fff;
-    text-transform: lowercase;
-    transition: 0.4s;
-
-}
-
-.footer>a:hover {
-    background: #4fa776ad;
-
-}
-
-.flasher_car {
-    background-color: red;
-}
-
-.flasher_od {
-    background-color: blue;
-}
-
-.flasher_of {
-    background-color: green;
-}
-
-.flasher_tr {
-    background-color: yellow;
-}
-
-.flasher_rd {
-    background-color: gray;
-}
-
-/* Fin footer */
 
 /* _______________________________________________________________________ */
 
@@ -252,12 +281,21 @@ body {
         grid-column: 1 / -1;
     }
 
-    .sidebar {
-        grid-column: 1 / 6;
+    .content .agenda {
+        font-size: 75%;
     }
 
-    .related-post {
+    .container>.related-post {
         grid-column: 1/-1;
+    }
+
+    .container .related-post .post {
+        align-items: center;
+    }
+
+    .container .related-post .img{
+        width: 45%;
+        margin-left: 27%;
     }
 
     /* HEADER */
